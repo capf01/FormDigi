@@ -8,22 +8,27 @@
 	<h:outputStylesheet name="Form.css" library="css" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Login de Usuário</title>
+	<script type="text/javascript" src="validarCampos.js">
+		
+	</script>
 </h:head>
 <h:body>
 	<h:outputText>Login</h:outputText>
 	<br></br>
-	
-	<h:panelGrid >
+	<h:form action="login" method="post" name="formLogin">
+
+	<h:panelGrid>
 		<p:outputLabel value="Login:"></p:outputLabel>
-		<p:inputText maxlength="30" size="20"></p:inputText>
-		<p:outputLabel value="Senha:"></p:outputLabel>
+		<p:inputText name="txtUsuario" maxlength="30" size="20"></p:inputText>
+		<p:outputLabel name="txtSenha" value="Senha:"></p:outputLabel>
 		<p:password></p:password>
 		<h:panelGrid columns="2">
 			<p:commandButton value="Entrar" />
 		</h:panelGrid>
 	</h:panelGrid>
-	
-	
+	</h:form>
+
+
 
 	<h:form>
 		<h:panelGrid>
