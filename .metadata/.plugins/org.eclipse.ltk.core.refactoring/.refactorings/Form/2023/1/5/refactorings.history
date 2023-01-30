@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Form/src/idex&apos; to &apos;index.xhtml&apos;" description="Rename resource &apos;idex&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/idex" name="index.xhtml" stamp="1675052256259" updateReferences="true"/>
+</session>
