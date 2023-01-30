@@ -1,44 +1,31 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-<h:html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+<!-- Página de login de usuário -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:p="http://primefaces.org/ui">
+
 <h:head>
-	<h:outputStylesheet name="Form.css" library="css" />
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Login de Usuário</title>
-	<script type="text/javascript" src="validarCampos.js">
-		
-	</script>
+
 </h:head>
+
 <h:body>
-	<h:outputText>Login</h:outputText>
-	<br></br>
-	<h:form action="login" method="post" name="formLogin">
+  <h:form>
+    <p:messages id="messages" />
+    <p:panelGrid columns="2">
+      <p:outputLabel for="nomeUsuario" value="Nome
+      Usuário:" />
+      <p:inputText id="nomeUsuario"
+      value="#{LoginMB.usuario.nomeUsuario}" />
 
-	<h:panelGrid>
-		<p:outputLabel value="Login:"></p:outputLabel>
-		<p:inputText name="txtUsuario" maxlength="30" size="20"></p:inputText>
-		<p:outputLabel name="txtSenha" value="Senha:"></p:outputLabel>
-		
-        <p:password value="#{passwordView.password6}" toggleMask="true" redisplay="true"/>
+      <p:outputLabel for="senha" value="Senha:" />
+      <p:password id="senha" value="#{LoginMB.usuario.senha}" />
 
-		<h:panelGrid columns="2">
-			<p:commandButton value="Entrar" />
-		</h:panelGrid>
-	</h:panelGrid>
-	</h:form>
+      <p:commandButton value="Enviar"
+      icon="ui-icon-star" action="#{LoginMB.envia}" ajax="false">
+      </p:commandButton>
 
-
-
-	<h:form>
-		<h:panelGrid>
-
-		</h:panelGrid>
-	</h:form>
-
+    </p:panelGrid>
+  </h:form>
 </h:body>
-
-
-</h:html>
+</html>
