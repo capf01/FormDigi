@@ -21,7 +21,9 @@
 		<p:outputLabel value="Login:"></p:outputLabel>
 		<p:inputText name="txtUsuario" maxlength="30" size="20"></p:inputText>
 		<p:outputLabel name="txtSenha" value="Senha:"></p:outputLabel>
-		<p:password></p:password>
+		
+        <p:password value="#{passwordView.password6}" toggleMask="true" redisplay="true"/>
+
 		<h:panelGrid columns="2">
 			<p:commandButton value="Entrar" />
 		</h:panelGrid>

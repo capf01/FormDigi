@@ -15,5 +15,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.faces-2.2.9.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/primefaces-4.0.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/primefaces-8.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

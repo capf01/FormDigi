@@ -9,22 +9,55 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Form Digiboard</title>
 </h:head>
+<script type="text/javascript">    
+    PrimeFaces.locales ['de'] = {
+        closeText: 'Schließen',
+        prevText: 'Zurück',
+        nextText: 'Weiter',
+        monthNames: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember' ],
+        monthNamesShort: ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez' ],
+        dayNames: ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'],
+        dayNamesShort: ['Son', 'Mon', 'Die', 'Mit', 'Don', 'Fre', 'Sam'],
+        dayNamesMin: ['S', 'M', 'D', 'M ', 'D', 'F ', 'S'],
+        weekHeader: 'Woche',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix:'',
+        timeOnlyTitle: 'Nur Zeit',
+        timeText: 'Zeit',
+        hourText: 'Stunde',
+        minuteText: 'Minute',
+        secondText: 'Sekunde',
+        currentText: 'Aktuelles Datum',
+        ampm: false,
+        month: 'Monat',
+        week: 'Woche',
+        day: 'Tag',
+        allDayText: 'Ganzer Tag'
+    };
+</script>
 <h:body>
 	<h:outputText>Formulário</h:outputText>
 	<h:form>
 	<p:graphicImage name="images/nature/nature4.jpg" library="demo"/>
 	<h:panelGrid >
-		<p:outputLabel value="Nome"/>
-		<p:inputText maxlength="80" size="30"/>
-		<p:outputLabel value="Data de Nascimento:"/>
-		<p:inputText maxlength="80" size="30"/>
+		<span class="ui-float-label">
+		<p:outputLabel value="Nome:"/>
+       <p:inputText id="float-input" value="#{Nome.user}" />
+       <p:outputLabel for="@previous" />
+   </span>
+		<p:outputLabel for="mask" value="Data de Nascimento:"/>
+        <p:calendar id="mask" value="#{calendarView.date9}" pattern="dd-MM-yyyy" mask="true" />
 		<p:outputLabel value="Endereço:"/>
-		<p:inputText maxlength="120" size="30"/>
+		<p:inputText maxlength="120" size="20"/>
 	</h:panelGrid>
 	
 	<br></br>
 	<h:panelGrid columns="4">
-	<p:commandButton  value="Adicionar"/>
+	 <p:growl id="growl" life="2000" />
+     
+    <p:commandButton value="Adicionar" id="ajax" update="growl" action="#{buttonView.buttonAction}" />
 	<p:dialog></p:dialog>
 	<p:commandButton value="Salvar"/>
 	<p:commandButton value="Excluir"/>
