@@ -12,33 +12,36 @@
 <h:body>
 	<h:outputText>Formulário</h:outputText>
 	<h:form>
+	<p:graphicImage name="images/nature/nature4.jpg" library="demo"/>
 	<h:panelGrid >
-		<h:outputLabel value="Nome:"></h:outputLabel>
-		<h:inputText maxlength="30" size="30"></h:inputText>
-		<h:outputLabel value="Endereço:"></h:outputLabel>
-		<h:inputText maxlength="120" size="30"></h:inputText>
-		<h:outputLabel value="Data de Nascimento:"></h:outputLabel>
-		<h:inputText maxlength="80" size="30"></h:inputText>
-	</h:panelGrid>
-	<br></br>
-	<h:panelGrid columns="3">
-	<h:commandButton value="Adicionar"></h:commandButton>
-	<h:commandButton value="Salvar"></h:commandButton>
-	<h:commandButton value="Excluir"></h:commandButton>
+		<p:outputLabel value="Nome"/>
+		<p:inputText maxlength="80" size="30"/>
+		<p:outputLabel value="Data de Nascimento:"/>
+		<p:inputText maxlength="80" size="30"/>
+		<p:outputLabel value="Endereço:"/>
+		<p:inputText maxlength="120" size="30"/>
 	</h:panelGrid>
 	
-	<h:commandButton value="Inserir foto"/>
-		<p:fileUpload />
-
-	</h:form>
 	<br></br>
-	<p:dataTable>teste</p:dataTable>
-	<br></br>
-	<h:panelGrid >
-		<h:outputLabel value="Buscar Usuário"></h:outputLabel>
-		<h:inputText maxlength="120" size="30"></h:inputText>
-		<h:commandButton value="Buscar"></h:commandButton>
+	<h:panelGrid columns="4">
+	<p:commandButton  value="Adicionar"/>
+	<p:dialog></p:dialog>
+	<p:commandButton value="Salvar"/>
+	<p:commandButton value="Excluir"/>
+	
 	</h:panelGrid>
+	</h:form>
+	
+		<p:fileUpload value="Inserir Foto"/>
+
+	
+	<br></br>
+
+	<p:outputLabel value="Buscar Usuário"></p:outputLabel>
+	<p:dataTable/>
+	<p:button value="Buscar"></p:button>
+	
+
 </h:body>
 
 

@@ -5,22 +5,25 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<h:outputStylesheet name="Form.css" library="css" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Login de Usuário</title>
 </h:head>
 <h:body>
 	<h:outputText>Login</h:outputText>
 	<br></br>
-	<h:panelGrid>
-		<h:outputLabel value="Login:"></h:outputLabel>
-		<h:inputText maxlength="30" size="30"></h:inputText>
-		<h:outputLabel value="Senha:"></h:outputLabel>
-		<h:inputSecret maxlength="6" size="30"></h:inputSecret>
+	
+	<h:panelGrid >
+		<p:outputLabel value="Login:"></p:outputLabel>
+		<p:inputText maxlength="30" size="20"></p:inputText>
+		<p:outputLabel value="Senha:"></p:outputLabel>
+		<p:password></p:password>
 		<h:panelGrid columns="2">
-		<h:button value="Entrar" action="index"></h:button>
-		<h:button value="Esqueci a senha"></h:button>
+			<p:commandButton value="Entrar" />
 		</h:panelGrid>
 	</h:panelGrid>
+	
+	
 
 	<h:form>
 		<h:panelGrid>
